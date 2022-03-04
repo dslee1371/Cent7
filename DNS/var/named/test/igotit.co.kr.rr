@@ -1,0 +1,44 @@
+$TTL 20
+@       IN      SOA     ns.igotit.co.kr.   root (
+                        2019070700      ; serial
+                        3H              ; refresh (3 hours)
+                        30M             ; retry (30 minutes)
+                        2W              ; expiry (2 weeks)
+                        1W )            ; minimum (1 week)
+        IN      NS      ns.igotit.co.kr.
+;
+; syntax is "last octet" and the host must have fqdn with trailing dot
+210      IN      PTR     bootstrap.ocp4.test.fu.igotit.co.kr.
+211      IN      PTR     master01.ocp4.test.fu.igotit.co.kr.
+212      IN      PTR     master02.ocp4.test.fu.igotit.co.kr.
+213      IN      PTR     master03.ocp4.test.fu.igotit.co.kr.
+221      IN      PTR     worker01.ocp4.test.fu.igotit.co.kr.
+222      IN      PTR     worker02.ocp4.test.fu.igotit.co.kr.
+223      IN      PTR     worker03.ocp4.test.fu.igotit.co.kr.
+224      IN      PTR     worker04.ocp4.test.fu.igotit.co.kr.
+225      IN      PTR     worker05.ocp4.test.fu.igotit.co.kr.
+226	 IN	 PTR	 infra01.test.fu.igotit.co.kr.
+227	 IN	 PTR	 infra02.test.fu.igotit.co.kr.
+228	 IN	 PTR	 infra03.test.fu.igotit.co.kr.
+231	IN	PTR	route01.ocp4.test.fu.igotit.co.kr.
+232	IN	PTR	route02.ocp4.test.fu.igotit.co.kr.
+233	IN	PTR	route03.ocp4.test.fu.igotit.co.kr.
+234	IN	PTR	route04.ocp4.test.fu.igotit.co.kr.
+30	 IN	 PTR	 study.test.fu.igotit.co.kr.
+31	 IN	 PTR	 study2.test.fu.igotit.co.kr.
+41	 IN	 PTR	 baek.was1.test.fu.igotit.co.kr.
+42	 IN	 PTR	 baek.was2.test.fu.igotit.co.kr.
+139	 IN	 PTR	 ostest.test.fu.igotit.co.kr.
+110	 IN	 PTR	 bastion.sean.test.fu.igotit.co.kr.
+;
+230	IN	PTR	bastion.ocp3d.test.fu.igotit.co.kr.
+231	IN	PTR	master01.ocp3d.test.fu.igotit.co.kr.
+232	IN	PTR	master02.ocp3d.test.fu.igotit.co.kr.
+233	IN	PTR	master03.ocp3d.test.fu.igotit.co.kr.
+234	IN	PTR	infra01.ocp3d.test.fu.igotit.co.kr.
+235	IN	PTR	infra02.ocp3d.test.fu.igotit.co.kr.
+236	IN	PTR	infra03.ocp3d.test.fu.igotit.co.kr.
+237	IN	PTR	worker01.ocp3d.test.fu.igotit.co.kr.
+238	IN	PTR	worker02.ocp3d.test.fu.igotit.co.kr.
+239	IN	PTR	worker03.ocp3d.test.fu.igotit.co.kr.
+141	IN	PTR	rhel01.test.fu.igotit.co.kr.

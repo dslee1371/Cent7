@@ -1,0 +1,106 @@
+$TTL 300       ; 1 hour
+@             IN SOA  ns.igotit.co.kr. dns.igotit.co.kr. (
+                                  2007040461 ; serial
+                                  7200       ; refresh (2 hours)
+                                  3600       ; retry (1 hour)
+                                  604800     ; expire (1 week)
+                                  3600       ; minimum (1 hour)
+                                 )
+
+                NS      ns.igotit.co.kr.
+                NS      ns1.igotit.co.kr.
+                NS      ns2.igotit.co.kr.
+                IN      A       192.168.6.254
+;
+; ocp4 start
+;
+ldap            IN      A       192.168.6.2
+storage         IN      A       192.168.6.3
+nas             IN      A       192.168.6.5
+echo1           IN      A       112.216.178.153
+echo2           IN      A       112.216.178.153
+owncloud        IN      A       192.168.6.6
+study           IN      A       192.168.6.30
+study2          IN      A       192.168.6.31
+;baek.was01      IN      A       192.168.6.41
+baek.was02      IN      A       192.168.6.42
+ostest          IN      A       192.168.6.139
+xwiki           IN      A       192.168.6.50
+gitlab          IN      A       192.168.6.50
+jslee-monit     IN      A       192.168.6.200
+bastion.sean    IN      A       192.168.6.110
+;
+bastion         IN      A       192.168.6.201
+image           IN      A       192.168.6.202
+bootstrap.ocp4  IN      A       192.168.6.210
+master01.ocp4   IN      A       192.168.6.211
+master02.ocp4   IN      A       192.168.6.212
+master03.ocp4   IN      A       192.168.6.213
+worker01.ocp4   IN      A       192.168.6.221
+worker02.ocp4   IN      A       192.168.6.222
+worker03.ocp4   IN      A       192.168.6.223
+worker04.ocp4   IN      A       192.168.6.224
+worker05.ocp4   IN      A       192.168.6.225
+infra01.ocp4            IN      A       192.168.6.226
+infra02.ocp4            IN      A       192.168.6.227
+infra03.ocp4            IN      A       192.168.6.228
+route01.ocp4    IN      A       192.168.6.231
+route02.ocp4    IN      A       192.168.6.232
+route03.ocp4    IN      A       192.168.6.233
+route04.ocp4    IN      A       192.168.6.234
+api.ocp4                IN      A       192.168.6.201
+api-int.ocp4            IN      A       192.168.6.201
+api             IN      A       192.168.6.201
+api-int         IN      A       192.168.6.201
+;*.apps.ocp4            IN      A       192.168.6.201
+kbtest.ocp4        IN      A       112.216.178.153
+kbjava.ocp4        IN      A       112.216.178.153
+;web1-kb-test.apps.ocp4 IN      A       192.168.6.201
+;web2-kb-test.apps.ocp4 IN      A       192.168.6.201
+;web3-kb-test.apps.ocp4 IN      A       192.168.6.201
+;web4-kb-test.apps.ocp4 IN      A       192.168.6.201
+*.apps.ocp4             IN      A       112.216.178.153
+*.appsi.ocp4            IN      A       192.168.6.233
+;
+etcd-0          IN      A       192.168.6.211
+etcd-1          IN      A       192.168.6.212
+etcd-2          IN      A       192.168.6.213
+;
+_etcd-server-ssl._tcp.ocp4  86400 IN    SRV 0        10     2380 etcd-0.ocp4
+_etcd-server-ssl._tcp.ocp4  86400 IN    SRV 0        10     2380 etcd-1.ocp4
+_etcd-server-ssl._tcp.ocp4  86400 IN    SRV 0        10     2380 etcd-2.ocp4
+_etcd-server-ssl._tcp.ocp4  86400 IN    SRV 0        10     2380 etcd-3.ocp4
+_etcd-server-ssl._tcp.ocp4  86400 IN    SRV 0        10     2380 etcd-4.ocp4
+_etcd-server-ssl._tcp.ocp4  86400 IN    SRV 0        10     2380 etcd-5.ocp4
+;
+; minishift
+;
+ocp3            IN      A       192.168.6.81
+api.ocp3        IN      A       192.168.6.81
+*.apps.ocp3     IN      A       192.168.6.81
+;
+;ocp4           IN      A       192.168.6.91
+;api.ocp4       IN      A       192.168.6.91
+;api-int.ocp4   IN      A       192.168.6.91
+;*.apps.ocp4    IN      A       192.168.6.91
+;etcd-0.ocp4    IN      A       192.168.6.91
+;_etcd-server-ssl._tcp  86400 IN    SRV 0        10     2380 etcd-0.ocp4
+;
+; ocp3.11
+;
+bastion.ocp3d   IN      A       192.168.6.230
+api.ocp3d       IN      A       192.168.6.230
+*.apps.ocp3d    IN      A       192.168.6.230
+master01.ocp3d  IN      A       192.168.6.161
+master02.ocp3d  IN      A       192.168.6.162
+master03.ocp3d  IN      A       192.168.6.163
+infra01.ocp3d   IN      A       192.168.6.164
+infra02.ocp3d   IN      A       192.168.6.165
+infra03.ocp3d   IN      A       192.168.6.166
+worker01.ocp3d  IN      A       192.168.6.167
+worker02.ocp3d  IN      A       192.168.6.168
+worker03.ocp3d  IN      A       192.168.6.169
+
+;##
+test.kbstar  IN      A       192.168.6.5
+rhel01	     	IN	A	192.168.6.141

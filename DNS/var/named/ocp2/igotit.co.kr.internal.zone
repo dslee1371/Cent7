@@ -1,0 +1,42 @@
+$TTL 300       ; 1 hour
+@             IN SOA  ns.igotit.co.kr. dns.igotit.co.kr. (
+                                  2007040461 ; serial
+                                  7200       ; refresh (2 hours)
+                                  3600       ; retry (1 hour)
+                                  604800     ; expire (1 week)
+                                  3600       ; minimum (1 hour)
+                                 )
+
+                NS      ns.igotit.co.kr.
+                NS      ns1.igotit.co.kr.
+                NS      ns2.igotit.co.kr.
+ns		IN      A	192.168.2.1
+bastion.demo4		IN      A	192.168.2.41
+ldap.demo4		IN      A	192.168.2.42
+bootstrap.demo4      A       192.168.2.50
+harbor.demo4	IN	A	192.168.2.43
+master01.demo4   IN      A       192.168.2.51
+master02.demo4   IN      A       192.168.2.52
+master03.demo4   IN      A       192.168.2.53
+route01.demo4   IN      A       192.168.2.61
+route02.demo4   IN      A       192.168.2.62
+worker01.demo4   IN      A       192.168.2.71
+worker02.demo4   IN      A       192.168.2.72
+worker03.demo4   IN      A       192.168.2.73
+worker04.demo4   IN      A       192.168.2.74
+worker05.demo4   IN      A       192.168.2.75
+worker06.demo4   IN      A       192.168.2.76
+api.demo4                IN      A       192.168.2.41
+api-int.demo4            IN      A       192.168.2.41
+
+*.apps.demo4            IN      A       112.216.178.153
+;
+etcd-0.demo4          IN      A       192.168.2.51
+etcd-1.demo4          IN      A       192.168.2.52
+etcd-2.demo4          IN      A       192.168.2.53
+;
+_etcd-server-ssl._tcp.demo4 86400 IN    SRV 0        10     2380 etcd-0.demo4
+_etcd-server-ssl._tcp.demo4  86400 IN    SRV 0        10     2380 etcd-1.demo4
+_etcd-server-ssl._tcp.demo4  86400 IN    SRV 0        10     2380 etcd-2.demo4
+;
+;

@@ -1,0 +1,34 @@
+$TTL 60
+@       IN SOA  dns.ocp3.fu.igotit.co.kr. root.ocp3.fu.igotit.co.kr. (
+                                        1       ; serial
+                                        1D      ; refresh
+                                        1H      ; retry
+                                        1W      ; expire
+                                        3H )    ; minimum
+               	NS      ns.ocp3.fu.igotit.co.kr.;
+                IN      A       192.168.3.1
+ns              IN      A       192.168.3.1
+api             IN      A       192.168.3.1
+api-int         IN      A       192.168.3.1
+*.apps          IN      A       192.168.3.1
+;
+baek.bastion	IN	A	192.168.3.31
+;baek.boopstrap	IN	A	192.168.3.32
+;
+gitlab.baek	IN	A	192.168.3.41
+;
+bastion.baek3	IN	A	192.168.3.10
+registry.baek3	IN	A	192.168.3.10
+;
+bootstrap.baek3	IN	A	192.168.3.11
+master01.baek3	IN	A	192.168.3.20
+infra01.baek3	IN	A	192.168.3.21
+worker01.baek3	IN	A	192.168.3.22
+;
+api.baek3                IN      A       192.168.3.10
+api-int.baek3            IN      A       192.168.3.10
+;
+etcd-0.baek3          IN      A       192.168.3.20
+;
+_etcd-server-ssl._tcp.baek3 86400 IN    SRV 0        10     2380 etcd-0.baek3
+;

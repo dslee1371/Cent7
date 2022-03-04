@@ -1,0 +1,27 @@
+$TTL 20
+@       IN      SOA     ns.igotit.co.kr.   root (
+                        2019070700      ; serial
+                        3H              ; refresh (3 hours)
+                        30M             ; retry (30 minutes)
+                        2W              ; expiry (2 weeks)
+                        1W )            ; minimum (1 week)
+        IN      NS      ns.igotit.co.kr.
+;
+; syntax is "last octet" and the host must have fqdn with trailing dot
+1	IN	PTR	ns.
+;
+41	IN	PTR	bastion.demo4.ocp2.fu.igotit.co.kr.
+50	IN	PTR	bootstrap.demo4.ocp2.fu.igotit.co.kr.
+51	IN	PTR	master01.demo4.ocp2.fu.igotit.co.kr.
+52	IN	PTR	master02.demo4.ocp2.fu.igotit.co.kr.
+53	IN	PTR	master03.demo4.ocp2.fu.igotit.co.kr.
+;
+61	IN	PTR	route01.demo4.ocp2.fu.igotit.co.kr.
+62	IN	PTR	route01.demo4.ocp2.fu.igotit.co.kr.
+71	IN	PTR	worker01.demo4.ocp2.fu.igotit.co.kr.
+72	IN	PTR	worker02.demo4.ocp2.fu.igotit.co.kr.
+73	IN	PTR	worker03.demo4.ocp2.fu.igotit.co.kr.
+;
+41 	IN	PTR	api.demo4.ocp2.igotit.co.kr.
+41 	IN	PTR	api-int.demo4.ocp2.igotit.co.kr.
+;
